@@ -227,7 +227,8 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
     return <Shield className="h-7 w-7" />
   }
 
-  const formatContent = (content: string) => {
+  const formatContent = (content: string | undefined) => {
+    if (!content) return <p className="text-lg text-muted-foreground leading-relaxed"></p>
     // Check if content contains numbered points
     if (content.includes('1)') || content.includes('2)') || content.includes('3)')) {
       const parts = content.split(/(?=\d+\))/)
@@ -316,7 +317,7 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
               </div>
             </div>
             <div className="prose prose-lg max-w-none">
-              {formatContent(currentStep.content)}
+              {formatContent(currentStep.content || "")}
             </div>
             {currentStep.aiGuidance && (
               <div className="bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
