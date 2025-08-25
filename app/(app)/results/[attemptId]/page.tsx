@@ -1,9 +1,9 @@
 import { ResultsDisplay } from "@/components/results/results-display"
 
 interface ResultsPageProps {
-  params: {
+  params: Promise<{
     attemptId: string
-  }
+  }>
 }
 
 export default async function ResultsPage({ params }: ResultsPageProps) {
