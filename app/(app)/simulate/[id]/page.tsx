@@ -3,9 +3,9 @@ import { SimulationPlayer } from "@/components/simulation/simulation-player"
 import { mockScenarios } from "@/data/scenarios"
 
 interface SimulatePageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export default async function SimulatePage({ params }: SimulatePageProps) {
