@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "seed": "node -r ts-node/register lib/seed-data.ts",
+    "deploy-rules": "firebase deploy --only firestore:rules",
+    "firebase-init": "firebase init",
+    "firebase-deploy": "firebase deploy"
+  }
+}
