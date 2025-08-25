@@ -25,12 +25,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    // Skip auth during build time
+    if (typeof window === 'undefined') {
+      setLoading(false)
+      return
+    }
+    
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setUser(user)
       
       if (user) {
-        const profile = await getUserProfile(user.uid)
-        setUserProfile(profile)
+        try {
+          const profile = await getUserProfile(user.uid)
+          setUserProfile(profile)
+        } catch (error) {
+          console.error('Error loading user profile:', error)
+          setUserProfile(null)
+        }
       } else {
         setUserProfile(null)
       }

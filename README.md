@@ -1,341 +1,223 @@
-# 🛡️ PhishGuard - Advanced Cybersecurity Training Platform
+<h2 align="center">🛡️ PhishGuard: Next-Generation Cybersecurity Training Platform</h2>
 
-## 🎯 Project Overview
+<h3 align="center">AI-powered phishing simulations with gamified learning for the modern workforce</h3>
 
-**PhishGuard** is a next-generation cybersecurity awareness training platform designed to combat the growing threat of phishing attacks through AI-powered simulations, gamified learning, and real-time threat intelligence.
+<div align="center">
+<img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+</div>
 
-### 📊 Problem Statement
-- **95% of cyber attacks** start with phishing
-- Traditional security training is **boring and ineffective**
-- Employees need **hands-on, realistic training**
-- Organizations lack **real-time threat awareness**
+<p align="center"><b>PhishGuard</b> is a comprehensive cybersecurity training platform designed to combat the growing threat of phishing attacks through AI-powered simulations, gamified learning, and real-time threat intelligence. Built with modern web technologies, it serves as a centralized hub where organizations can train employees to identify and respond to sophisticated phishing attempts with realistic scenarios, immediate feedback, and personalized learning paths.</p><br>
 
-### 💡 Our Solution
-PhishGuard transforms cybersecurity training through:
-- **AI-Powered Simulations** - Realistic, adaptive phishing scenarios
-- **Multi-Step Learning** - Comprehensive training journeys
-- **Gamification** - Points, badges, leaderboards for engagement
-- **Real-Time Intelligence** - Live threat feeds and alerts
-- **Indian Context** - Localized scenarios (UPI, Aadhaar, etc.)
+<div align="center"> 
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+  
+</div>
+<br>
+<h4 align="center">⛩️ Live Website : <a href="https://phishguard.vercel.app/">https://phishguard.vercel.app</a></h4>
+<br>
 
 ---
 
-## 🚀 Key Features
+## 🎯 Problem Statement
 
-### 🎮 **Gamified Learning Experience**
-- **Points System** - Earn points for correct responses
-- **Badges & Achievements** - Unlock security expert badges
-- **Leaderboards** - Compete with colleagues
+**95% of cyber attacks start with phishing**, yet traditional security training remains ineffective and boring.
+
+- **Rising Threats**: Phishing attacks increased by 220% in 2024
+- **Ineffective Training**: PowerPoint presentations don't prepare for real attacks
+- **Missing Context**: Generic training ignores Indian-specific threats (UPI, Aadhaar)
+- **Low Engagement**: Employees forget training within days
+
+## 💡 Solution Overview
+
+PhishGuard revolutionizes cybersecurity training through:
+
+| Feature | Description |
+|---------|-------------|
+| **AI-Powered Simulations** | Realistic, adaptive phishing scenarios that evolve with threats |
+| **Gamification** | Points, badges, leaderboards, and streak tracking |
+| **Indian Context** | UPI, Aadhaar, banking, and government-themed scenarios |
+| **Real-Time Analytics** | Live threat intelligence and performance tracking |
+| **Multi-Step Learning** | Comprehensive training journeys from intro to mastery |
+
+---
+
+## ✨ Key Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎮 Gamified Experience
+- **Points & Badges** - Earn rewards for correct responses
+- **Leaderboards** - Compete with colleagues globally
 - **Streak Tracking** - Maintain daily learning streaks
+- **Achievement System** - Unlock security expert levels
 
-### 🧠 **AI-Powered Training**
-- **Adaptive Scenarios** - AI adjusts difficulty based on performance
+### 🧠 AI-Powered Training
+- **Adaptive Scenarios** - AI adjusts difficulty dynamically
 - **Real-Time Coaching** - Instant feedback and guidance
-- **Personalized Learning** - Tailored training paths
 - **Predictive Analytics** - Identify vulnerable users
+- **Personalized Paths** - Tailored learning experiences
 
-### 🎯 **Realistic Simulations**
+</td>
+<td width="50%">
+
+### 🎯 Realistic Simulations
 - **Email Phishing** - Sophisticated email scenarios
 - **SMS Scams** - Mobile-based attack simulations
 - **Voice Phishing** - Phone call attack training
 - **QR Code Scams** - Modern attack vectors
-- **Social Engineering** - Psychology-based attacks
 
-### 📱 **Indian Context Training**
+### 🇮🇳 Indian Context
 - **UPI Scams** - Payment app fraud scenarios
 - **Aadhaar Fraud** - Identity theft prevention
-- **Banking Alerts** - Fake security notifications
 - **Government Impersonation** - Tax/official scams
 - **Festival Scams** - Seasonal attack awareness
 
-### 📊 **Advanced Analytics**
-- **Risk Assessment** - Individual and department-level analysis
-- **Performance Tracking** - Detailed progress monitoring
-- **Threat Intelligence** - Real-time security alerts
-- **Compliance Reporting** - Audit-ready documentation
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🛠️ Technology Stack
 
-### **Frontend**
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Modern, responsive styling
-- **Shadcn/UI** - Professional component library
-- **Recharts** - Interactive data visualization
+<div align="center">
 
-### **Backend & Database**
-- **Firebase** - Authentication and real-time database
-- **Firestore** - NoSQL document database
-- **Firebase Auth** - Secure user authentication
-- **Cloud Functions** - Serverless backend logic
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | Next.js 14, TypeScript, Tailwind CSS, Shadcn/UI |
+| **Backend** | Firebase, Firestore, Firebase Auth |
+| **AI/ML** | Gemini AI, Predictive Analytics |
+| **Deployment** | Vercel, Firebase Hosting |
+| **Analytics** | Recharts, Custom Dashboards |
 
-### **AI & Intelligence**
-- **Gemini AI** - Advanced language model integration
-- **Real-time Threat Feeds** - Live security intelligence
-- **Predictive Analytics** - ML-powered risk assessment
+</div>
 
 ---
 
-## 🎨 User Interface Highlights
+## 📱 Demo Access
 
-### 🏠 **Modern Dashboard**
-- Clean, professional design
-- Real-time statistics and progress
-- Quick access to training modules
-- Personalized recommendations
+### 🔐 Demo Credentials
 
-### 🎯 **Interactive Simulations**
-- Realistic email/SMS interfaces
-- Step-by-step guided training
-- Immediate feedback and explanations
+```bash
+# User Account
+Email: avi@mail.com
+Password: avi123
+
+# Admin Account  
+Email: admin@phishguard.com
+Password: admin123
+```
+
+### 📸 Platform Features
+
+<details>
+<summary>Dashboard</summary>
+
+- Real-time security analytics
+- Personalized learning recommendations
+- Progress tracking and achievements
+- Risk assessment meters
+
+</details>
+
+<details>
+<summary>Training Simulations</summary>
+
+- Interactive phishing scenarios
+- Step-by-step guided learning
+- Immediate feedback system
 - Multi-device responsive design
 
-### 📈 **Analytics & Reporting**
-- Beautiful data visualizations
-- Department performance comparisons
-- Individual progress tracking
-- Exportable compliance reports
+</details>
+
+<details>
+<summary>Leaderboards</summary>
+
+- Global and department rankings
+- Achievement showcases
+- Competitive learning environment
+- Social engagement features
+
+</details>
 
 ---
 
-## 👥 User Roles & Features
+## 👥 User Roles
 
-### 🎓 **Employees/Trainees**
-- Access training scenarios
-- Track personal progress
-- Earn badges and points
-- View leaderboards
-- Receive threat alerts
-
-### 👨‍💼 **Administrators**
-- Manage user accounts
-- Create custom scenarios
-- Monitor organization-wide progress
-- Generate compliance reports
-- Configure threat intelligence
-
-### 🔒 **Security Teams**
-- Advanced analytics dashboard
-- Risk assessment tools
-- Incident response tracking
-- Threat intelligence management
+| Role | Access Level | Features |
+|------|-------------|----------|
+| **Trainee** | Basic | Training scenarios, progress tracking, badges |
+| **Admin** | Full | User management, custom scenarios, analytics |
+| **Security Team** | Advanced | Threat intelligence, incident response, reporting |
 
 ---
 
-## 🌟 Unique Selling Points
+## 🌟 Competitive Advantages
 
-### 1. **Indian Market Focus**
-- Localized attack scenarios
-- Regional language support (Hindi, Marathi, Tamil)
-- Cultural context awareness
-- Local threat intelligence
-
-### 2. **AI-Powered Personalization**
-- Adaptive difficulty levels
-- Personalized learning paths
-- Intelligent threat detection
-- Predictive risk modeling
-
-### 3. **Gamification Excellence**
-- Engaging point systems
-- Achievement unlocking
-- Social competition
-- Progress visualization
-
-### 4. **Enterprise Ready**
-- Scalable architecture
-- Compliance reporting
-- SSO integration
-- Multi-tenant support
+<table>
+<tr>
+<td width="25%" align="center">
+  <h4>🇮🇳 Indian Market Focus</h4>
+  <p>First platform with localized Indian cybersecurity scenarios</p>
+</td>
+<td width="25%" align="center">
+  <h4>🤖 AI-Powered</h4>
+  <p>Adaptive learning with intelligent threat detection</p>
+</td>
+<td width="25%" align="center">
+  <h4>🎮 Gamified Learning</h4>
+  <p>Engaging experience with points, badges, and leaderboards</p>
+</td>
+<td width="25%" align="center">
+  <h4>🏢 Enterprise Ready</h4>
+  <p>Scalable architecture with compliance reporting</p>
+</td>
+</tr>
+</table>
 
 ---
 
-## 📊 Demo Credentials
+### Installation
+- [Here](Installation.md)
 
-### **User Account**
-- **Email:** avi@mail.com
-- **Password:** avi123
-- **Role:** Standard User
+### Screenshots
+- [Here](Screenshots.md)
+---
 
-### **Admin Account**
-- **Email:** admin@phishguard.com
-- **Password:** admin123
-- **Role:** Administrator
+## 🤝 Contributing
+
+We welcome contributions from the community. Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+### Development Process
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
 ---
 
-## 🚀 Getting Started
 
-### **Prerequisites**
-```bash
-Node.js 18+
-npm or yarn
-Firebase account
-```
+## 📄 License
 
-### **Installation**
-```bash
-# Clone repository
-git clone https://github.com/your-repo/phishguard
-
-# Install dependencies
-npm install
-
-# Configure environment
-cp .env.example .env.local
-# Add your Firebase credentials
-
-# Run development server
-npm run dev
-```
-
-### **Firebase Setup**
-```bash
-# Install Firebase CLI
-npm install -g firebase-tools
-
-# Login to Firebase
-firebase login
-
-# Deploy Firestore rules
-firebase deploy --only firestore:rules
-
-# Seed database (optional)
-npm run seed
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📈 Market Impact
+<div align="center">
 
-### **Target Audience**
-- **Enterprises** - 500+ employees
-- **SMBs** - 50-500 employees  
-- **Educational Institutions**
-- **Government Organizations**
-- **Healthcare Providers**
+**Made with ❤️ by Team Fyrebird**
 
-### **Market Size**
-- **Global Cybersecurity Training Market:** $2.5B (2024)
-- **Indian Market:** $180M (Growing 25% YoY)
-- **Addressable Market:** 50,000+ organizations in India
+*Transforming Cybersecurity Training Through Innovation*
 
-### **Competitive Advantage**
-- **First** Indian-context focused platform
-- **Advanced** AI personalization
-- **Superior** user experience
-- **Comprehensive** threat coverage
+**⭐ Star this repository if you found it helpful!**
 
----
-
-## 🎯 Business Model
-
-### **Subscription Tiers**
-- **Starter:** ₹99/user/month - Basic training
-- **Professional:** ₹199/user/month - Advanced features
-- **Enterprise:** ₹299/user/month - Full platform access
-- **Custom:** Tailored pricing for large organizations
-
-### **Revenue Streams**
-- Monthly/Annual subscriptions
-- Custom scenario development
-- Professional services
-- White-label licensing
-
----
-
-## 🔮 Future Roadmap
-
-### **Phase 1** (Current)
-- ✅ Core platform development
-- ✅ Basic AI integration
-- ✅ Indian scenario library
-- ✅ Gamification features
-
-### **Phase 2** (Q2 2025)
-- 🔄 Advanced AI personalization
-- 🔄 Mobile application
-- 🔄 API integrations
-- 🔄 Multi-language support
-
-### **Phase 3** (Q4 2025)
-- 📅 VR/AR training modules
-- 📅 Advanced threat simulation
-- 📅 Global expansion
-- 📅 Enterprise partnerships
-
----
-
-## 🏆 Awards & Recognition
-
-- **🥇 Best Cybersecurity Innovation** - TechCrunch Disrupt 2024
-- **🏅 Top EdTech Startup** - NASSCOM Emerge 50
-- **⭐ Excellence in AI** - AI Summit India 2024
-
----
-
-## 👨‍💻 Development Team
-
-### **Core Team**
-- **Avishkar Patil** - Full Stack Developer & Project Lead
-- **Technical Expertise** - Next.js, Firebase, AI Integration
-- **Focus Areas** - User Experience, Security, Scalability
-
-### **Technology Partners**
-- **Firebase/Google Cloud** - Infrastructure
-- **Gemini AI** - Artificial Intelligence
-- **Vercel** - Deployment & Hosting
-
----
-
-## 📞 Contact & Demo
-
-### **Live Demo**
-🌐 **Website:** [https://phishguard-demo.vercel.app](https://phishguard-demo.vercel.app)
-
-### **Contact Information**
-📧 **Email:** avishkarpatil64@gmail.com
-📱 **Phone:** +91-XXXXX-XXXXX
-🏢 **Location:** TKIET, Kolhapur, Maharashtra
-
-### **Social Media**
-- **LinkedIn:** [Avishkar Patil](https://linkedin.com/in/avishkar-patil)
-- **GitHub:** [Project Repository](https://github.com/avishkar-patil/phishguard)
-- **Twitter:** [@PhishGuardAI](https://twitter.com/phishguardai)
-
----
-
-## 📄 License & Legal
-
-### **Intellectual Property**
-- **Copyright:** © 2025 PhishGuard Technologies
-- **License:** Proprietary Software
-- **Patents:** AI-powered phishing detection (Pending)
-
-### **Compliance**
-- **GDPR** Compliant
-- **SOC 2** Ready
-- **ISO 27001** Aligned
-- **Data Localization** Supported
-
----
-
-## 🎉 Thank You!
-
-**PhishGuard** - *Transforming Cybersecurity Training Through Innovation*
-
-*"In a world where 95% of cyber attacks start with phishing, PhishGuard ensures your organization is prepared, protected, and empowered."*
-
----
-
-### 🚀 Ready to Transform Your Security Training?
-
-**Schedule a Demo Today!**
-- See PhishGuard in action
-- Discuss your organization's needs
-- Get custom pricing
-- Start your security transformation journey
-
-**Contact us now and join the cybersecurity revolution! 🛡️**
+</div>

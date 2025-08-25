@@ -50,7 +50,18 @@ export default function DashboardPage() {
 
   useEffect(() => {
     const loadUserData = async () => {
-      if (!user) return
+      // Skip during build time
+      if (typeof window === 'undefined') {
+        setUserData(mockUserData)
+        setIsLoading(false)
+        return
+      }
+      
+      if (!user) {
+        setUserData(mockUserData)
+        setIsLoading(false)
+        return
+      }
       
       try {
         setIsLoading(true)
@@ -82,11 +93,20 @@ export default function DashboardPage() {
           setUserData(userData)
         } else {
           // Fallback to mock data if no profile found
-          setUserData(mockUserData)
+          setUserData({
+            ...mockUserData,
+            displayName: 'Demo User',
+            email: 'demo@phishguard.com'
+          })
         }
       } catch (error) {
         console.error('Error loading user data:', error)
-        setUserData(mockUserData)
+        // Always provide fallback data
+        setUserData({
+          ...mockUserData,
+          displayName: 'Demo User',
+          email: 'demo@phishguard.com'
+        })
       } finally {
         setIsLoading(false)
       }
@@ -95,10 +115,10 @@ export default function DashboardPage() {
     loadUserData()
   }, [user])
 
-  const completionRate = Math.round((userData.completedScenarioIds.length / 5) * 100)
-  const successRate = Math.round(
+  const completionRate = userData?.completedScenarioIds ? Math.round((userData.completedScenarioIds.length / 5) * 100) : 0
+  const successRate = userData?.recentAttempts ? Math.round(
     (userData.recentAttempts.filter((a) => a.result === "safe").length / userData.recentAttempts.length) * 100,
-  )
+  ) : 0
 
   if (isLoading || !userData) {
     return <PageSkeleton />
@@ -119,7 +139,7 @@ export default function DashboardPage() {
               Security Dashboard
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Welcome back, {userData.displayName}! Track your phishing awareness progress and improve your cybersecurity skills
+              Welcome back, {userData?.displayName || 'User'}! Track your phishing awareness progress and improve your cybersecurity skills
             </p>
           </div>
         </div>
@@ -135,9 +155,9 @@ export default function DashboardPage() {
             <Trophy className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-primary">{userData.scoreTotal.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-primary">{(userData?.scoreTotal || 0).toLocaleString()}</div>
             <p className="text-xs text-muted-foreground flex items-center gap-1">
-              <TrendingUp className="h-3 w-3 text-green-500" />+{userData.weeklyProgress.improvement}% from last week
+              <TrendingUp className="h-3 w-3 text-green-500" />+{userData?.weeklyProgress?.improvement || 0}% from last week
             </p>
           </CardContent>
           <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full -mr-8 -mt-8"></div>
@@ -149,10 +169,10 @@ export default function DashboardPage() {
             <Shield className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-500">{userData.riskLevel}</div>
+            <div className="text-2xl font-bold text-green-500">{userData?.riskLevel || 'Medium'}</div>
             <p className="text-xs text-muted-foreground">Excellent security awareness</p>
             <div className="mt-2">
-              <RiskMeter level={userData.riskLevel} />
+              <RiskMeter level={userData?.riskLevel || 'Medium'} />
             </div>
           </CardContent>
         </Card>
@@ -163,7 +183,7 @@ export default function DashboardPage() {
             <Target className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{userData.completedScenarioIds.length}/5</div>
+            <div className="text-2xl font-bold">{userData?.completedScenarioIds?.length || 0}/5</div>
             <p className="text-xs text-muted-foreground">{completionRate}% completion rate</p>
             <Progress value={completionRate} className="mt-2 h-1" />
           </CardContent>
@@ -178,7 +198,7 @@ export default function DashboardPage() {
             <div className="text-2xl font-bold">{successRate}%</div>
             <p className="text-xs text-muted-foreground">Last 7 attempts</p>
             <div className="flex gap-1 mt-2">
-              {userData.recentAttempts.slice(0, 7).map((attempt, i) => (
+              {(userData?.recentAttempts || []).slice(0, 7).map((attempt, i) => (
                 <div
                   key={i}
                   className={`w-2 h-2 rounded-full ${attempt.result === "safe" ? "bg-green-500" : "bg-destructive"}`}
@@ -198,7 +218,7 @@ export default function DashboardPage() {
               <CardDescription>Your performance over the last 7 days</CardDescription>
             </CardHeader>
             <CardContent>
-              <RecentActivityChart data={userData.recentAttempts} />
+              <RecentActivityChart data={userData?.recentAttempts || []} />
             </CardContent>
           </Card>
           <AnalyticsWidget />
@@ -215,9 +235,9 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
               <div className="text-center space-y-2">
-                <div className="text-3xl font-bold text-primary">{userData.streakData.current}</div>
+                <div className="text-3xl font-bold text-primary">{userData?.streakData?.current || 0}</div>
                 <p className="text-sm text-muted-foreground">Correct identifications in a row</p>
-                <div className="text-xs text-muted-foreground">Best streak: {userData.streakData.best}</div>
+                <div className="text-xs text-muted-foreground">Best streak: {userData?.streakData?.best || 0}</div>
               </div>
             </CardContent>
           </Card>
