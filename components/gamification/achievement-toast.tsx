@@ -53,7 +53,7 @@ export function AchievementToast({ achievement, onShow }: AchievementToastProps)
     const Icon = getIcon()
 
     toast({
-      variant: "success",
+      variant: "default",
       title: (
         <div className="flex items-center gap-2">
           <Icon className={`h-5 w-5 ${getRarityColor()}`} />
