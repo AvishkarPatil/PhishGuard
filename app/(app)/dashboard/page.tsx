@@ -74,14 +74,14 @@ export default function DashboardPage() {
           
           const userData = {
             ...profile,
-            recentAttempts: attempts.slice(0, 7).map(attempt => ({
+            recentAttempts: attempts.slice(0, 7).map((attempt: any) => ({
               date: attempt.timestamp?.toDate?.()?.toISOString() || new Date().toISOString(),
               score: attempt.score || 0,
               result: attempt.result || 'safe'
             })),
             weeklyProgress: {
-              thisWeek: profile.scoreTotal || 0,
-              lastWeek: Math.max(0, (profile.scoreTotal || 0) - 200),
+              thisWeek: (profile as any).scoreTotal || 0,
+              lastWeek: Math.max(0, ((profile as any).scoreTotal || 0) - 200),
               improvement: 15
             },
             streakData: {
@@ -117,7 +117,7 @@ export default function DashboardPage() {
 
   const completionRate = userData?.completedScenarioIds ? Math.round((userData.completedScenarioIds.length / 5) * 100) : 0
   const successRate = userData?.recentAttempts ? Math.round(
-    (userData.recentAttempts.filter((a) => a.result === "safe").length / userData.recentAttempts.length) * 100,
+    (userData.recentAttempts.filter((a: any) => a.result === "safe").length / userData.recentAttempts.length) * 100,
   ) : 0
 
   if (isLoading || !userData) {
@@ -198,7 +198,7 @@ export default function DashboardPage() {
             <div className="text-2xl font-bold">{successRate}%</div>
             <p className="text-xs text-muted-foreground">Last 7 attempts</p>
             <div className="flex gap-1 mt-2">
-              {(userData?.recentAttempts || []).slice(0, 7).map((attempt, i) => (
+              {(userData?.recentAttempts || []).slice(0, 7).map((attempt: any, i: number) => (
                 <div
                   key={i}
                   className={`w-2 h-2 rounded-full ${attempt.result === "safe" ? "bg-green-500" : "bg-destructive"}`}
