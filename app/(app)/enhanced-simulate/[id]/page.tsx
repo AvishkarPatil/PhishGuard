@@ -5,9 +5,9 @@ import { SimulationSkeleton } from "@/components/loading/simulation-skeleton"
 import { Suspense } from "react"
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export default async function EnhancedSimulatePage({ params }: PageProps) {

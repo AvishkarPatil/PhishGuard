@@ -2,14 +2,16 @@
 
 <h3 align="center">AI-powered phishing simulations with gamified learning for the modern workforce</h3>
 
+<br>
+
+<p align="center"><b>PhishGuard</b> is a comprehensive cybersecurity training platform designed to combat the growing threat of phishing attacks through AI-powered simulations, gamified learning, and real-time threat intelligence. Built with modern web technologies, it serves as a centralized hub where organizations can train employees to identify and respond to sophisticated phishing attempts with realistic scenarios, immediate feedback, and personalized learning paths.</p><br>
+
 <div align="center">
 <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" alt="Next.js" />
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
 <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
 </div>
-
-<p align="center"><b>PhishGuard</b> is a comprehensive cybersecurity training platform designed to combat the growing threat of phishing attacks through AI-powered simulations, gamified learning, and real-time threat intelligence. Built with modern web technologies, it serves as a centralized hub where organizations can train employees to identify and respond to sophisticated phishing attempts with realistic scenarios, immediate feedback, and personalized learning paths.</p><br>
 
 <div align="center"> 
   
