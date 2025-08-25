@@ -107,7 +107,7 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
       } else {
         const quizOption = selectedOption as QuizOption
         isCorrect = quizOption.isCorrect
-        explanation = quizOption.explanation
+        explanation = quizOption.explanation || ""
       }
       
       const newResponses = {
@@ -126,7 +126,6 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
         toast({
           title: "Correct!",
           description: explanation,
-          duration: 3000,
         })
       } else {
         setMistakes(mistakes + 1)
@@ -134,7 +133,6 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
           title: "Incorrect",
           description: explanation,
           variant: "destructive",
-          duration: 4000,
         })
       }
 
@@ -156,7 +154,6 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
     toast({
       title: "Security Hint",
       description: hintMessages[hintsUsed % hintMessages.length],
-      duration: 5000,
     })
   }
 
@@ -188,7 +185,6 @@ export function EnhancedSimulationPlayer({ scenario }: EnhancedSimulationPlayerP
     toast({
       title: "Training Complete!",
       description: `You earned ${Math.max(0, finalScore)} points! Great work on completing the security training.`,
-      duration: 3000,
     })
     
     setTimeout(() => {

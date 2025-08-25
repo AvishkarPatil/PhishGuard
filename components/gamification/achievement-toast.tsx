@@ -66,7 +66,6 @@ export function AchievementToast({ achievement, onShow }: AchievementToastProps)
           <p className="text-sm opacity-90">{achievement.description}</p>
         </div>
       ),
-      duration: 5000,
     })
 
     onShow?.()

@@ -93,14 +93,12 @@ export function MultiStepPlayer({ scenario }: MultiStepPlayerProps) {
         toast({
           title: "Correct! 🎉",
           description: explanation,
-          duration: 3000,
         })
       } else {
         toast({
           title: "Not quite right",
           description: explanation,
           variant: "destructive",
-          duration: 4000,
         })
         setAttempt((prev) => (prev ? { ...prev, mistakes: prev.mistakes + 1 } : null))
       }
@@ -118,7 +116,6 @@ export function MultiStepPlayer({ scenario }: MultiStepPlayerProps) {
     toast({
       title: "💡 Hint",
       description: "Look for urgency tactics, suspicious domains, and requests for sensitive information.",
-      duration: 5000,
     })
   }
 

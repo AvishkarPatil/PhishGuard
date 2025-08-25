@@ -26,7 +26,6 @@ export function ReferralProgram({ referralCode, referralsCount, pointsEarned, ti
       toast({
         title: "Copied!",
         description: "Referral link copied to clipboard",
-        duration: 2000,
       })
     } catch (err) {
       console.error("Failed to copy:", err)
