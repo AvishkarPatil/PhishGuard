@@ -221,7 +221,7 @@ export default function LeaderboardPage() {
                   </div>
                   <Avatar className="w-16 h-16 absolute -top-8 left-2 border-4 border-white shadow-lg">
                     <AvatarFallback className="bg-gradient-to-br from-blue-500 to-purple-500 text-white font-bold">
-                      {topUsers[1]?.name.split(" ").map(n => n[0]).join("")}
+                      {topUsers[1]?.name.split(" ").map((n: string) => n[0]).join("")}
                     </AvatarFallback>
                   </Avatar>
                 </div>
@@ -238,7 +238,7 @@ export default function LeaderboardPage() {
                   </div>
                   <Avatar className="w-20 h-20 absolute -top-10 left-2 border-4 border-yellow-400 shadow-xl">
                     <AvatarFallback className="bg-gradient-to-br from-yellow-500 to-orange-500 text-white font-bold text-lg">
-                      {topUsers[0]?.name.split(" ").map(n => n[0]).join("")}
+                      {topUsers[0]?.name.split(" ").map((n: string) => n[0]).join("")}
                     </AvatarFallback>
                   </Avatar>
                 </div>
@@ -255,7 +255,7 @@ export default function LeaderboardPage() {
                   </div>
                   <Avatar className="w-16 h-16 absolute -top-8 left-2 border-4 border-white shadow-lg">
                     <AvatarFallback className="bg-gradient-to-br from-amber-500 to-orange-500 text-white font-bold">
-                      {topUsers[2]?.name.split(" ").map(n => n[0]).join("")}
+                      {topUsers[2]?.name.split(" ").map((n: string) => n[0]).join("")}
                     </AvatarFallback>
                   </Avatar>
                 </div>
@@ -314,7 +314,7 @@ export default function LeaderboardPage() {
                       <div className="flex items-center gap-3 flex-1 min-w-0">
                         <Avatar className="h-12 w-12 border-2 border-white shadow-md">
                           <AvatarFallback className="bg-gradient-to-br from-slate-500 to-slate-600 text-white font-bold">
-                            {user.name.split(" ").map(n => n[0]).join("")}
+                            {user.name.split(" ").map((n: string) => n[0]).join("")}
                           </AvatarFallback>
                         </Avatar>
                         <div className="min-w-0 flex-1">
